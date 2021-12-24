@@ -103,7 +103,7 @@
 #     puts "Number of parameters is: #{var.length}"
       
 #     # using for loop
-#     for i in 0...var.length
+#     for iRubyTraining in 0...var.length
 #        puts "Parameters are: #{var[i]}"
 #     end
 #  end
@@ -121,10 +121,7 @@
 #     b = 39
       
 #     sum = a + b
-      
-#     # return the value of the sum
-#     return sum+2
-      
+RubyTraining
 #     end
       
 #     # calling of num method
