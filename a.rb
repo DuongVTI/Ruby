@@ -222,7 +222,7 @@
 # puts a == 5 ? "a bằng 5" : "a không bằng 5"
 # puts "a bằng 5" if a == 5
 
-##Phân biệt each và map: 
+##Phân biệt each và map: (collect cơ bản giống map)
 ##-map return về giá trị mảng mới sau khi chạy vòng lặp, còn each reurn về mảng ban đầu
 ##Each tương tự các vòng lặp khác, map giúp code ngắn gọn hơn
 ##Map không cần tạo ra mảng trung gian khi muốn thay đổi các giá trị trong mảng, vd:
@@ -243,22 +243,44 @@
 # print [1,2,3,4,5,6,7,8,9,10].map{ |e| e > 5 }
 # print [1,2,3,4,5,6,7,8,9,10].select{ |e| e > 5 }
 
-##selsect
 
-states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"]
-# singles: Imperative version
-def imperative_singles(states)
-  singles = []
-  states.each do |state|
-    if state.split.length == 1
-      singles << state
+##Dùng each
+# states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"]
+# # singles: Imperative version
+# def imperative_singles(states)
+#   singles = []
+#   states.each do |state|
+#     if state.split.length == 1
+#       singles << state
+#     end
+#   end
+#   print singles
+# end
+# puts imperative_singles(states) ##Khi dùng ech
+
+# ##Dùng select
+# #Select không thể  trực tiếp thay đổi các giá trị trong mảng
+# print states.select{|v| v.split.length == 1} ##Không cần tạo ra biến trung gian
+# print (1..8).select(&:even?)
+
+##inject giúp tính tổng các giá trị trong mảng
+# print [1,2,3,4,5,6,7,8,9,10].inject{ |sum, e| sum += e } 
+# print " "
+# print [1,2,3,4,5,6,7,8,9,10].inject(15){ |sum, e| sum += e } # thêm giá trin cho inject
+
+class Nguoi
+ 
+    def initialize(ten)
+      @ten = ten
+    end
+   
+    def show
+      puts @ten
     end
   end
-  print singles
-end
-puts imperative_singles(states) ##Khi dùng ech
-
-##Dùng select
-print states.select{|v| v.split.length == 1} ##Không cần tạo ra biến trung gian
-print ["Kansas", "Nebraska", "North Dakota", "South Dakota"].select(&:split.length == 1)
-print (1..8).select(&:even?)
+   
+  first = Nguoi.new('Quoc')
+  first.show # Quoc
+   
+  second = Nguoi.new('Minh')
+  second.show # Minh
