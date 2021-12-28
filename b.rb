@@ -1,217 +1,246 @@
-# END{
-#     puts "That's all my systems!!"
-# }
+# # Module là một tập các phương thức, lớp, hằng số,
+# # do đó module cũng gần giống như class, chỉ khác
+# # là module không thể tạo các đối tượng và không thể thừa kế.
+# # =module MyFirstModule
+    # END{
+    #     puts "That's all my systems!!"
+    # }
 
-# print <<EOF
-#    This is the first way of creating
-#    here document ie. multiple line string.
-# EOF
-
-
-# print <<`EOC`                 # execute commands
-# 	echo hi there
-# 	echo lo there
-# EOC
+    # print <<EOF
+    #    This is the first way of creating
+    #    here document ie. multiple line string.
+    # EOF
 
 
-# print <<"foo", <<"bar"  # you can stack them
-# 	I said foo.
-# foo
-# 	I said bar.
-# bar
+    # print <<`EOC`                 # execute commands
+    # 	echo hi there
+    # 	echo lo there
+    # EOC
 
-# BEGIN{
-#     puts "My system running!!" 
-# }
+
+    # print <<"foo", <<"bar"  # you can stack them
+    # 	I said foo.
+    # foo
+    # 	I said bar.
+    # bar
+
+    # BEGIN{
+    #     puts "My system running!!" 
+    # }
 
 =begin
-This is a comment.
-This is a comment, too.
-This is a comment, too.
-I said that already.
+    This is a comment.
+    This is a comment, too.
+    This is a comment, too.
+    I said that already.
 =end
 
 
-# class DongVat
-#     def initialize
-#       puts 'Xin chào bạn!'
-#     end
-   
-#     def dog
-#       'Tiếng kêu của con chó là: Go Go'
-#     end
-   
-#     def cat
-#       'Tiếng kêu của con mèo là: Mew Mew'
-#     end
-   
-#     def duck
-#         puts 'Tiếng kêu của con vịt là: Duck Duck'
-#     end
-#   end
-#    x = 5
-#   thu_nuoi = DongVat.new
-#   puts thu_nuoi.dog+" "+x.to_s # Xuất ra màn hình tiếng kêu của con chó
-#   puts thu_nuoi.cat # Xuất ra màn hình tiếng kêu của con mèo
-#   puts thu_nuoi.duck
+    # class DongVat
+    #     def initialize
+    #       puts 'Xin chào bạn!'
+    #     end
+    
+    #     def dog
+    #       'Tiếng kêu của con chó là: Go Go'
+    #     end
+    
+    #     def cat
+    #       'Tiếng kêu của con mèo là: Mew Mew'
+    #     end
+    
+    #     def duck
+    #         puts 'Tiếng kêu của con vịt là: Duck Duck'
+    #     end
+    #   end
+    #    x = 5
+    #   thu_nuoi = DongVat.new
+    #   puts thu_nuoi.dog+" "+x.to_s # Xuất ra màn hình tiếng kêu của con chó
+    #   puts thu_nuoi.cat # Xuất ra màn hình tiếng kêu của con mèo
+    #   puts thu_nuoi.duck
+
+    
+
+
+    # class DongVat
+    #     def initialize
+    #       puts 'Xin chào bạn!'
+    #     end
+    
+    #     def dog
+    #       'Tiếng kêu của con chó là: Go Go'
+    #     end
+    
+    #     def cat
+    #       'Tiếng kêu của con mèo là: Mew Mew'
+    #     end
+    
+    #     def duck
+    #       'Tiếng kêu của con vịt là: Duck Duck'
+    #     end
+    
+    #     # Từ khoá self: đại diện cho tên class là DongVat
+    #     # Có thể dùng DongVat.people
+    #     def self.people
+    #       'Give me some money'
+    #     end
+    #     def self.mySelf
+    #         'Give me more money'
+    #       end
+    #   end   
+    #   thu_nuoi = DongVat.new
+    #   puts thu_nuoi.dog
+    #   puts thu_nuoi.cat
+    #   puts thu_nuoi.duck
+    #   puts DongVat.people
+    #   puts DongVat.mySelf
+
+
+    # Animals = Array["dog","cat","fish"]
+    # puts Animals[-1]
+    # puts Animals[0,2]
+    # Animals[2] = "bird"
+    # puts Animals[2]
+    # puts Animals.include? "dog"
+    # puts Animals.include? "dogs"
+    # print Animals.sort()
+
+
+    # class ThuocTinh
+    #     def dong_vat_4_chan
+    #       'Là loài động vật có 4 chân'
+    #     end
+    
+    #     def dong_vat_2_chan
+    #       'Là loài động vật có 2 chân'
+    #     end
+    #   end
+    
+    #   class DongVat < ThuocTinh
+    #     def initialize
+    #       puts 'Xin chào bạn!'
+    #     end
+    
+    #     def dog
+    #       'Tiếng kêu của con chó là: Go Go' + '. ' + dong_vat_4_chan
+    #     end
+    
+    #     def cat
+    #       'Tiếng kêu của con mèo là: Mew Mew' + '. ' + dong_vat_4_chan
+    #     end
+    
+    #     def duck
+    #       'Tiếng kêu của con vịt là: Duck Duck' + '. ' + dong_vat_2_chan
+    #     end
+    #   end
+    #   thu_nuoi = DongVat.new
+    #   puts thu_nuoi.dog
+    #   puts thu_nuoi.cat
+    #   puts thu_nuoi.duck
+
+
+
+    # class ThuocTinh
+    #     def dong_vat_2_chan
+    #       'Là loài động vật có 2 chân'
+    #     end
+    
+    #     def tinh_cach
+    #       'Là loài động vật giữ nhà'
+    #     end
+    #   end
+    
+    #   class DongVat < ThuocTinh
+    #     def dog
+    #       'Tiếng kêu của con chó là: Go Go' + '. ' + dong_vat_2_chan + '. ' + tinh_cach
+    #     end
+    
+    #     # Overwrite phương thức tinh_cach, không quan trọng thứ tự khai báo trước sau
+    #     def tinh_cach
+    #       'Là loài động vật đi rong, nuôi lớn làm thịt'
+    #     end
+    
+    #     def duck
+    #       'Tiếng kêu của con vit là: Duck Duck' + '. ' + dong_vat_2_chan + '. ' + tinh_cach
+    #     end
+    #   end
+    
+    #   thu_nuoi = DongVat.new
+    #   puts thu_nuoi.dog
+    #   puts thu_nuoi.duck
+
+
+    # class ThuocTinh
+    #     def dong_vat_2_chan
+    #       'Là loài động vật có 2 chân'
+    #     end
+    
+    #     def tinh_cach
+    #       'Là loài động vật giữ nhà'
+    #     end
+    #   end
+    
+    #   class DongVat < ThuocTinh
+    #     def dog
+    #       'Tiếng kêu của con chó là: Go Go' + '. ' + dong_vat_2_chan + '. ' + tinh_cach
+    #     end
+    
+    #     # Overwrite phương thức tinh_cach, không quan trọng thứ tự khai báo trước sau
+    #     def tinh_cach
+    #       super + '. ' + 'Giữ nhà không được thì xin mời lên mâm'+"\n"
+    #     end
+    
+    #     def duck
+    #       'Tiếng kêu của con vit là: Duck Duck' + '. ' + dong_vat_2_chan + '. ' + tinh_cach
+    #     end
+    #   end
+    
+    #   thu_nuoi = DongVat.new
+    #   puts thu_nuoi.dog*5
+    #   puts thu_nuoi.duck
+
+
+    # bool = [true, false].sample #sample random a value in array
+    # if bool
+    #   puts "Return value true"
+    # else
+    #   puts "Return value false"
+    # end
+
+    # a = [1,2,3,4]
+    # print a[5].nil?
+    # puts "!"
+
+    #puts nil?
+
+    ##symbol 
+    # symbol = :hello
+    # puts symbol[0]
+    ##symbol[0] = "aaaa" #Err because symbol can't change
+    ##symbol = :aaaa #Can change all
+    # puts symbol
+
+    ##Instance variable là biến chỉ thuộc riêng lẻ cho mỗi đối tượng và phạm vi của nó là toàn bộ class
 
  
+    
+   # Class Greeter
+    #     include MyFirstModule
+    #     end
 
+    #     # Cách 2:
 
-# class DongVat
-#     def initialize
-#       puts 'Xin chào bạn!'
-#     end
-   
-#     def dog
-#       'Tiếng kêu của con chó là: Go Go'
-#     end
-   
-#     def cat
-#       'Tiếng kêu của con mèo là: Mew Mew'
-#     end
-   
-#     def duck
-#       'Tiếng kêu của con vịt là: Duck Duck'
-#     end
-   
-#     # Từ khoá self: đại diện cho tên class là DongVat
-#     # Có thể dùng DongVat.people
-#     def self.people
-#       'Give me some money'
-#     end
-#     def self.mySelf
-#         'Give me more money'
-#       end
-#   end   
-#   thu_nuoi = DongVat.new
-#   puts thu_nuoi.dog
-#   puts thu_nuoi.cat
-#   puts thu_nuoi.duck
-#   puts DongVat.people
-#   puts DongVat.mySelf
+    #     module MyFirstModule
+    #     def self.say_hello
+    #         puts “Hello, I am a Module”
+    #     end
+    #     end
 
+    #     # Khi vừa muốn được mixin và muốn được sử dụng như module function
+    #     module MyFirstModule
+    #     def self.say_hello
+    #         puts “Hello, I am a Module”
+    #     end
 
-# Animals = Array["dog","cat","fish"]
-# puts Animals[-1]
-# puts Animals[0,2]
-# Animals[2] = "bird"
-# puts Animals[2]
-# puts Animals.include? "dog"
-# puts Animals.include? "dogs"
-# print Animals.sort()
-
-
-# class ThuocTinh
-#     def dong_vat_4_chan
-#       'Là loài động vật có 4 chân'
-#     end
-   
-#     def dong_vat_2_chan
-#       'Là loài động vật có 2 chân'
-#     end
-#   end
-   
-#   class DongVat < ThuocTinh
-#     def initialize
-#       puts 'Xin chào bạn!'
-#     end
-   
-#     def dog
-#       'Tiếng kêu của con chó là: Go Go' + '. ' + dong_vat_4_chan
-#     end
-   
-#     def cat
-#       'Tiếng kêu của con mèo là: Mew Mew' + '. ' + dong_vat_4_chan
-#     end
-   
-#     def duck
-#       'Tiếng kêu của con vịt là: Duck Duck' + '. ' + dong_vat_2_chan
-#     end
-#   end
-#   thu_nuoi = DongVat.new
-#   puts thu_nuoi.dog
-#   puts thu_nuoi.cat
-#   puts thu_nuoi.duck
-
-
-
-# class ThuocTinh
-#     def dong_vat_2_chan
-#       'Là loài động vật có 2 chân'
-#     end
-   
-#     def tinh_cach
-#       'Là loài động vật giữ nhà'
-#     end
-#   end
-   
-#   class DongVat < ThuocTinh
-#     def dog
-#       'Tiếng kêu của con chó là: Go Go' + '. ' + dong_vat_2_chan + '. ' + tinh_cach
-#     end
-   
-#     # Overwrite phương thức tinh_cach, không quan trọng thứ tự khai báo trước sau
-#     def tinh_cach
-#       'Là loài động vật đi rong, nuôi lớn làm thịt'
-#     end
-   
-#     def duck
-#       'Tiếng kêu của con vit là: Duck Duck' + '. ' + dong_vat_2_chan + '. ' + tinh_cach
-#     end
-#   end
-   
-#   thu_nuoi = DongVat.new
-#   puts thu_nuoi.dog
-#   puts thu_nuoi.duck
-
-
-# class ThuocTinh
-#     def dong_vat_2_chan
-#       'Là loài động vật có 2 chân'
-#     end
-   
-#     def tinh_cach
-#       'Là loài động vật giữ nhà'
-#     end
-#   end
-   
-#   class DongVat < ThuocTinh
-#     def dog
-#       'Tiếng kêu của con chó là: Go Go' + '. ' + dong_vat_2_chan + '. ' + tinh_cach
-#     end
-   
-#     # Overwrite phương thức tinh_cach, không quan trọng thứ tự khai báo trước sau
-#     def tinh_cach
-#       super + '. ' + 'Giữ nhà không được thì xin mời lên mâm'+"\n"
-#     end
-   
-#     def duck
-#       'Tiếng kêu của con vit là: Duck Duck' + '. ' + dong_vat_2_chan + '. ' + tinh_cach
-#     end
-#   end
-   
-#   thu_nuoi = DongVat.new
-#   puts thu_nuoi.dog*5
-#   puts thu_nuoi.duck
-
-
-# bool = [true, false].sample #sample random a value in array
-# if bool
-#   puts "Return value true"
-# else
-#   puts "Return value false"
-# end
-
-# a = [1,2,3,4]
-# print a[5].nil?
-# puts "!"
-
-#puts nil?
-
-#symbol 
-# symbol = :hello
-# puts symbol[0]
-# symbol[0] = "aaaa" #Err because symbol can't change
-# puts symbol
-
+    #     module_function :say_hello
+    # end
