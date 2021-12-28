@@ -15,14 +15,16 @@
 # puts "Enter your name:  "
 # name = gets.chomp()
 # puts ("Hello "+name+", you are cool!")
-# print "Enter fiRubyTrainningRubyTrainning
+# print "Enter first num: "
+# fsNum = gets.to_i
 # print "Enter the second num: "
-# scNum = gets.chomp().to_i
+# scNum = gets.to_i
 # puts (fsNum.to_f + scNum)
+
 # if 0
-#     puts "false"
-# else 
 #     puts "true"
+# else 
+#     puts "false"
 # end
 
 # x = 4
@@ -43,9 +45,9 @@
 #     puts i
 # end 
 
+
 # val = 0
 # loop do
-     
 #     puts val
      
 #     val = val + 1 
@@ -57,7 +59,8 @@
 
 
 # 20.times {|time|
-#     puts time #chi nhan bien integer
+# print "Count: "     
+# puts time #chi nhan bien integer
 # }
 
 
@@ -66,10 +69,8 @@
   
 # # statements to be displayed
 # puts "aaaaaa"
-  
 # # keyword to end method
 # end
-  
 # # calling of the method
 # geeks
 
@@ -81,7 +82,7 @@
   
 # # geeks is the method name
 # # var1 and var2 are the parameters
-# def geeks (var1RubyTrainning
+# def geeks (var1)
  
 # puts "Without Parameters"
 # puts ""
@@ -91,33 +92,30 @@
 
 
 
-# def geeks (*varRubyTrainning)
+# def geeks (*var) # khởi tạo methot có mảng chưa quy định giới hạn
       
 #     # to display the total number of parameters
 #     puts "Number of parameters is: #{var.length}"
       
 #     # using for loop
-#     for iRubyTraining in 0...var.length
+#     for i in 0...var.length
 #        puts "Parameters are: #{var[i]}"
 #     end
 #  end
    
- # calling method by passing 
- # variable number of arguments
+#  #calling method by passing 
+#  #variable number of arguments
 #  geeks "GFG", "G4G"
 #  geeks "GeeksforGeeks"
 
 
-#  def num
-  
+#  def num  
 #     # variables of method
 #     a = 10
 #     b = 39
       
 #     sum = a + b
-# RubyTraining
 #     end
-      
 #     # calling of num method
 #     puts "The result is: #{num}"
 
@@ -132,7 +130,7 @@
 #     puts a+b
 #     return  a + b
 #      # dòng này sẽ không được trả về bởi vì nằm sau từ khoá return
-    
+#     a-b
 # end
 # def tong_hai_so_2 (a,b)
 #     puts a+b
@@ -140,16 +138,17 @@
 #      # dòng này sẽ không được trả về bởi vì nằm sau từ khoá return
     
 # end
-
 # tong_hai_so(a,b)
-# tong_hai_so_2(a,b)
+# tong_hai_so_2(a,b) #Biến local khai báo ở đâu thì dùng ở đó
 
-##Create a hash and puts keys, values
+
+
+# #Create a hash and puts keys, values
 # H = Hash["a" => 100, "b" => 200, "Duong" => ["21 years old", "HN","duongthientai141@gmail.com"]] #Key, value can be a array, obj,..
 # puts "#{H['a']}"
 # puts "#{H['b']}"
 # puts H.keys #each key, value printed on one line
-#puts "#{H.keys}" #printed key or value as a array  
+# puts "#{H.keys}" #printed key or value as a array  
 # puts "#{H['Duong']}"
 # puts H.keys[1]
 # puts H.values[1]
@@ -159,7 +158,7 @@
 # keys = months.keys
 # puts "#{keys}"
 
-# Create a empty hash
+# #Create a empty hash
 # h = Hash.new( "aaa" ) #Create default value
 # puts h.values[0] #Not have any value to puts
 # puts h.keys[0] #Not have any key to puts
@@ -169,21 +168,37 @@
 # a = [1,2,3,4]
 # puts a[5].nil?
 
+# #Missing 
 # class Dog
 #     def talk
 #        puts "Dog go go"
 #    end
  
-#    def method_missing method_name, *arg
-#       if method_name.to_s == 'eat';puts "Dog don't need eat"
+#    def method_missing name, *arg  #Khi gọi đến phương thức không tồn tại, có thể thay đổi câu báo lỗi
+#     puts "No have this method"
+#       # if name.to_s == 'eat'
+#       #   puts "Dog don't need eat"
         
-#       else
-#         talk
-#       end
+#       # else
+#       #   talk
+#       # end
 #     end
 # end
-#  dog = Dog.new
-# puts dog.eats
+# dog = Dog.new
+# puts dog.eat
+
+## look up
+# class Dung
+#   def hello
+#     puts "Hello animal"
+#   end
+# end
+ 
+# class Dog < Dung
+  
+# end
+# a = Dog.new
+# puts a.hello #Class dog không tồn tại method hello, do đó nó tiếp tục gọi đến superclass khác của nó(Dung)
 
 # x =  1
 #  unless x == 0  #Trừ khi x = 0 thì câu lệnh bên trong sẽ luôn được thực hiện.
@@ -222,7 +237,7 @@
 # puts a == 5 ? "a bằng 5" : "a không bằng 5"
 # puts "a bằng 5" if a == 5
 
-##Phân biệt each và map: 
+##Phân biệt each và map: (collect cơ bản giống map)
 ##-map return về giá trị mảng mới sau khi chạy vòng lặp, còn each reurn về mảng ban đầu
 ##Each tương tự các vòng lặp khác, map giúp code ngắn gọn hơn
 ##Map không cần tạo ra mảng trung gian khi muốn thay đổi các giá trị trong mảng, vd:
@@ -243,22 +258,98 @@
 # print [1,2,3,4,5,6,7,8,9,10].map{ |e| e > 5 }
 # print [1,2,3,4,5,6,7,8,9,10].select{ |e| e > 5 }
 
-##selsect
 
-states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"]
-# singles: Imperative version
-def imperative_singles(states)
-  singles = []
-  states.each do |state|
-    if state.split.length == 1
-      singles << state
-    end
-  end
-  print singles
+# #Dùng each
+# states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"]
+# # singles: Imperative version
+# def imperative_singles(states)
+#   singles = []
+#   states.each do |state|
+#     if state.split.length == 1
+#       singles << state
+#     end
+#   end
+#   print singles
+# end
+# puts imperative_singles(states) ##Khi dùng ech
+
+# def hello
+#   puts "Hello"
+#   yield # Truyền block vào method và thực hiện nó
+
+# end
+ 
+# hello { puts "Code truyền vào method" }
+
+
+# def hello
+#   puts "Hello"
+#   yield #Nếu chúng ta khia báo yield mà không truyền block vào 
+#   #method thì sẽ gây ra lỗi và đoạn code bên dưới yield sẽ không được thực thi
+#   puts "Goodbye"
+# end
+# hello # Thêm if block_given? để kiểm tra có block không, nếu không thì bỏ qua để tránh lỗi xảy ra :
+# def hello
+#   puts "Hello"
+#   yield if block_given? #yield('Phú', 22) if block_given? #Truyền tham số vào yield 
+#   puts "Goodbye"
+# end
+# hello do #|name, age|
+##puts "Xin chào tôi là #{name}, năm nay tôi #{age} tuổi"
+#    puts "Xin chào tôi là , năm nay tôi tuổi"
+#  end
+
+# def hello
+#   value = yield if block_given? #Trả về kết quả cuối cùng của block
+#   puts "Kết quả của yield là #{value}"
+# end
+ 
+# hello do
+#   1 + 1
+#   2+3
+#   4+5
+# end
+
+
+def hello &block
+  puts block
+
+  puts "aaa"
 end
-puts imperative_singles(states) ##Khi dùng ech
+ 
+hello do
+  puts "#{1+1}"
+end
 
-##Dùng select
-print states.select{|v| v.split.length == 1} ##Không cần tạo ra biến trung gian
-print ["Kansas", "Nebraska", "North Dakota", "South Dakota"].select(&:split.length == 1)
-print (1..8).select(&:even?)
+# ##Dùng select
+# #Select không thể  trực tiếp thay đổi các giá trị trong mảng
+# print states.select{|v| v.split.length == 1} ##Không cần tạo ra biến trung gian
+# print (1..8).select(&:even?)
+
+##inject giúp tính tổng các giá trị trong mảng
+# print [1,2,3,4,5,6,7,8,9,10].inject{ |sum, e| sum += e } 
+# print " "
+# print [1,2,3,4,5,6,7,8,9,10].inject(15){ |sum, e| sum += e } # thêm giá trin cho inject
+
+# class Nguoi
+ 
+#     def initialize(ten)
+#       @ten = ten
+#     end
+   
+#     def show
+#       puts @ten
+#     end
+#   end
+   
+#   first = Nguoi.new('Quoc')
+#   first.show # Quoc
+   
+#   second = Nguoi.new('Minh')
+#   second.show # Minh
+
+# a = [ "a", "b", "c" ]
+# n = [ 65, 66, 67 ]
+# puts a.pack("A5A3A5")   #=> "a  b  c  "
+# puts a.pack("a3a3a3")   #=> "a\000\000b\000\000c\000\000"
+# puts n.pack("ddd") 
